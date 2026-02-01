@@ -16,6 +16,12 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     GameEventVector2 onMove;
 
+    [SerializeField]
+    GameEventColor onColor;
+
+
+    [SerializeField]
+    ColorSO red, white, blue;
 
 
     public void HandleMove(InputAction.CallbackContext context)
@@ -41,6 +47,35 @@ public class PlayerControl : MonoBehaviour
         if (context.performed)
         {
             onQuit.Invoke();
+        }
+    }
+
+    void ColorEvent(ColorSO color)
+    {
+        onColor.Invoke(color);
+    }
+
+    public void HandleRed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            ColorEvent(red);
+        }
+    }
+
+    public void HandleWhite(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            ColorEvent(white);
+        }
+    }
+
+    public void HandleBlue(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            ColorEvent(blue);
         }
     }
 }

@@ -10,7 +10,6 @@ public class BulletSpeedForward : BulletSpeed
         {
             speed = value;
             body.linearVelocity = transform.up.normalized * speed;
-            Debug.LogWarning(transform.up.normalized * speed);
         }
     }
 

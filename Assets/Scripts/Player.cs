@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     int startingHealth;
 
+    [SerializeField]
+    FactionSO playerFaction;
+
     int health;
     public ColorSO Color
     {
@@ -25,6 +28,8 @@ public class Player : MonoBehaviour
             sprite.color = color.Color;
         }
     }
+
+    public FactionSO Faction { get => playerFaction; }
 
     internal void Damage(int v)
     {

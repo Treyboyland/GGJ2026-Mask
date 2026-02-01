@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
+    ColorSO white;
+
+    [SerializeField]
     ColorSO startingColor;
 
     int currentHealth;
@@ -31,12 +34,13 @@ public class Enemy : MonoBehaviour
     void OnEnable()
     {
         currentHealth = statsSO.Health;
+        Color = startingColor;
     }
 
     void Damage(int amount)
     {
         currentHealth -= amount;
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
             Die();
@@ -49,13 +53,26 @@ public class Enemy : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    void HandleBullet(Bullet bullet)
+    {
+        if (bullet.Color != color && bullet.Color == white)
+        {
+            Damage(bullet.Stats.Damage);
+            bullet.gameObject.SetActive(false);
+        }
+        else if (bullet.Color == color)
+        {
+            Damage(2 * bullet.Stats.Damage);
+            bullet.gameObject.SetActive(false);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         var bullet = collision.gameObject.GetComponent<Bullet>();
         if (bullet && bullet.Faction != faction)
         {
-            Damage((bullet.Color != color ? 1 : 2) * bullet.Stats.Damage);
-            bullet.gameObject.SetActive(false);
+            HandleBullet(bullet);
         }
         else
         {

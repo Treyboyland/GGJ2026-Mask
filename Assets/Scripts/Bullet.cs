@@ -42,5 +42,5 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public FactionSO Faction { get => faction;  }
+    public FactionSO Faction { get => faction; set => faction = value; }
 }

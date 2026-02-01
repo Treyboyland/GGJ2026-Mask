@@ -45,7 +45,7 @@ public class PlayerWeapon : MonoBehaviour
 
         bullet.transform.position = transform.position;
         bullet.Color = player.Color;
-        bullet.Faction = 
+        bullet.Faction = player.Faction;
 
         bullet.gameObject.SetActive(true);
         bullet.Stats = bullet.Stats;
