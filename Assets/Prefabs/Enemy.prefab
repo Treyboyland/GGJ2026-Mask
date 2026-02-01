@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 920798176340658720}
   - component: {fileID: 5484289456445657247}
   - component: {fileID: 1586584564585577323}
+  - component: {fileID: 8272755994100686756}
+  - component: {fileID: 1259515160911489231}
+  - component: {fileID: 6314176980829126300}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -108,8 +111,13 @@ MonoBehaviour:
   faction: {fileID: 11400000, guid: 3d3bf05b37a68534eb862170c3208f6a, type: 2}
   statsSO: {fileID: 11400000, guid: 29a13dc15eca1dc4ab9beac7da9be354, type: 2}
   spriteRenderer: {fileID: 920798176340658720}
+  horizontal: {fileID: 8272755994100686756}
+  vertical: {fileID: 1259515160911489231}
   white: {fileID: 11400000, guid: 00d5529dee2f31d44ba8bf0fe782c68c, type: 2}
   startingColor: {fileID: 11400000, guid: 92f2b530e66b0d549a95640855c8d72d, type: 2}
+  onHit: {fileID: 11400000, guid: a22bc2be47dbfaa49b9c9bd0e6447467, type: 2}
+  onPlayerHit: {fileID: 11400000, guid: e190da35439b8f647baff126f7d5ee45, type: 2}
+  onDeath: {fileID: 11400000, guid: 934e7f578d56ef94cb885e98f1792a92, type: 2}
 --- !u!58 &1586584564585577323
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +154,42 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &8272755994100686756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258326783598416867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3ac468d8fb02e489e2c53677565b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMoveHorizontal
+  enemy: {fileID: 5484289456445657247}
+--- !u!114 &1259515160911489231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258326783598416867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00400b9ec8a9448488d3a00bbf165508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMoveVertical
+  enemy: {fileID: 5484289456445657247}
+--- !u!114 &6314176980829126300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258326783598416867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba8295209c51ea4fa1faaf31b6cb9c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableAfterInvisible
+  secondsToWait: 3

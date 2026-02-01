@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4211680952978040390}
   - component: {fileID: 3950942594691463850}
+  - component: {fileID: 8704280919233291562}
   m_Layer: 0
   m_Name: OnQuit
   m_TagString: Untagged
@@ -77,10 +78,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe3cf07de2ec5448a25d96909c14df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
-  gameEvent: {fileID: 0}
+  gameEvent: {fileID: 11400000, guid: 60bab3e3fa013e54c8fccb7f50d84965, type: 2}
   Response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8704280919233291562}
+        m_TargetAssemblyTypeName: QuitGameHandler, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8704280919233291562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651400332822859875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff05b09be9ac0e4f9db328f7df6b122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuitGameHandler
 --- !u!1 &8176516319762489594
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138667780235182369}
   - component: {fileID: 3560308021078327535}
+  - component: {fileID: 3616702709453972750}
   m_Layer: 0
   m_Name: OnReset
   m_TagString: Untagged
@@ -125,7 +151,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe3cf07de2ec5448a25d96909c14df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
-  gameEvent: {fileID: 0}
+  gameEvent: {fileID: 11400000, guid: ebea1e434a8fba24793848662037ebe2, type: 2}
   Response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3616702709453972750}
+        m_TargetAssemblyTypeName: LoadSceneHandler, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: _Scenes/Game
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3616702709453972750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176516319762489594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c82b7ff3200bc48b7c2e70360dee0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadSceneHandler

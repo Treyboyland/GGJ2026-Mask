@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
+    [SerializeField]
+    GameEvent onWeaponFire;
 
     [SerializeField]
     float secondsBetweenShots;
@@ -49,5 +51,6 @@ public class PlayerWeapon : MonoBehaviour
 
         bullet.gameObject.SetActive(true);
         bullet.Stats = bullet.Stats;
+        onWeaponFire.Invoke();
     }
 }

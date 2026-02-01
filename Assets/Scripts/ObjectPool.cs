@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ObjectPool<T> : MonoBehaviour where T : MonoBehaviour
@@ -49,5 +50,8 @@ public class ObjectPool<T> : MonoBehaviour where T : MonoBehaviour
         return CreateObject();
     }
 
-
+    public int GetNumActiveObjects()
+    {
+        return pool.Count(x => x.gameObject.activeInHierarchy);
+    }
 }

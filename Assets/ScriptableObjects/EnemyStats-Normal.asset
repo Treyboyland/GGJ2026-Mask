@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: EnemyStats-Normal
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStatsSO
   health: 4
+  points: 1
+  speed: 3

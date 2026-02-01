@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01510ee1dba9da14f823851fab21c7e5, type: 3}
+  m_Name: RandomAudio-EnemyHit
+  m_EditorClassIdentifier: Assembly-CSharp::AudioRandomizer
+  clips:
+  - {fileID: 8300000, guid: 7d557dd959ce80b4ca0bc0ffeb7d785a, type: 3}
+  - {fileID: 8300000, guid: e1b097f771e5a44479276e2a572b2c7b, type: 3}
+  - {fileID: 8300000, guid: 82e50cec8f904094dbcfe039642d0cc7, type: 3}
+  pitchRange: {x: 0.8, y: 1.2}
+  volumeRange: {x: 0.2, y: 0.4}
