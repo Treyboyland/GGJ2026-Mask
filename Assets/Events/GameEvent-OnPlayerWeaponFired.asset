@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c45d80efc66f774682e29e697fc6a67, type: 3}
-  m_Name: EnemyStats-Rare
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyStatsSO
-  health: 10
-  points: 3
-  speed: 7
+  m_Script: {fileID: 11500000, guid: feddcd3296947594babf082e7da9becd, type: 3}
+  m_Name: GameEvent-OnPlayerWeaponFired
+  m_EditorClassIdentifier: Assembly-CSharp::GameEvent

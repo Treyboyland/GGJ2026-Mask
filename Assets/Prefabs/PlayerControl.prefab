@@ -170,6 +170,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e15bf472-252d-461a-b8ee-876c959736f9
     m_ActionName: 'Player/White[/SwitchProControllerHID/leftTrigger,/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7161825176113618532}
+        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
+        m_MethodName: HandleScreenshot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9d7ca07b-4d94-49dc-96a0-1d66059cc210
+    m_ActionName: 'Player/Screenshot[/Keyboard/period,/SwitchProControllerHID/capture]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -192,6 +208,7 @@ MonoBehaviour:
   onFire: {fileID: 11400000, guid: 18ac4476d97b2ce49a41d514b98a1689, type: 2}
   onMove: {fileID: 11400000, guid: 3fa2456e4a8807440b3f8964dd571c65, type: 2}
   onColor: {fileID: 11400000, guid: c8a316d13717046448d4dacdb67a2476, type: 2}
+  onScreenShot: {fileID: 11400000, guid: 1c30ae2141612ba4fafa6d2ec9f288bb, type: 2}
   red: {fileID: 11400000, guid: 92f2b530e66b0d549a95640855c8d72d, type: 2}
   white: {fileID: 11400000, guid: 00d5529dee2f31d44ba8bf0fe782c68c, type: 2}
   blue: {fileID: 11400000, guid: 101174d2fa8b59f4597128a602d7bf66, type: 2}

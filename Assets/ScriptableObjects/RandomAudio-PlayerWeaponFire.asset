@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01510ee1dba9da14f823851fab21c7e5, type: 3}
-  m_Name: RandomAudio-EnemyHit
+  m_Name: RandomAudio-PlayerWeaponFire
   m_EditorClassIdentifier: Assembly-CSharp::AudioRandomizer
   clips:
-  - {fileID: 8300000, guid: e1b097f771e5a44479276e2a572b2c7b, type: 3}
-  - {fileID: 8300000, guid: 82e50cec8f904094dbcfe039642d0cc7, type: 3}
-  pitchRange: {x: 0.9, y: 1.2}
-  volumeRange: {x: 0.4, y: 0.6}
+  - {fileID: 8300000, guid: 7e6cd92881fea4149bb346c35f40cb19, type: 3}
+  pitchRange: {x: 0.8, y: 1.2}
+  volumeRange: {x: 0.2, y: 0.3}

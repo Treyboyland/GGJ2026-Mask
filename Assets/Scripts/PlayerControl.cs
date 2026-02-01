@@ -19,6 +19,9 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     GameEventColor onColor;
 
+    [SerializeField]
+    GameEvent onScreenShot;
+
 
     [SerializeField]
     ColorSO red, white, blue;
@@ -76,6 +79,14 @@ public class PlayerControl : MonoBehaviour
         if (context.performed)
         {
             ColorEvent(blue);
+        }
+    }
+
+    public void HandleScreenshot(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            onScreenShot.Invoke();
         }
     }
 }

@@ -179,6 +179,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &157468734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157468736}
+  - component: {fileID: 157468735}
+  m_Layer: 0
+  m_Name: PlayerWeaponFire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &157468735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157468734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe3cf07de2ec5448a25d96909c14df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 2690105cef791e74b88927d97b90cb38, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d8e5d94cbeb95734aa9a33dcbc20c32d, type: 2}
+        m_TargetAssemblyTypeName: AudioRandomizer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &157468736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157468734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &167414185
 GameObject:
   m_ObjectHideFlags: 0
@@ -6821,7 +6881,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6896,8 +6956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef7a3418110ec643ae7465b1a5d8a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
-  onWeaponFire: {fileID: 0}
-  secondsBetweenShots: 0.3
+  onWeaponFire: {fileID: 11400000, guid: 2690105cef791e74b88927d97b90cb38, type: 2}
+  secondsBetweenShots: 0.2
   playerBulletPool: {fileID: 380991056}
   player: {fileID: 1706780881}
 --- !u!1 &1917918363
@@ -7169,14 +7229,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3560308021078327535, guid: b1f7312276da1f54184e1a5ca8a80ed0, type: 3}
-      propertyPath: gameEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: ebea1e434a8fba24793848662037ebe2, type: 2}
-    - target: {fileID: 3950942594691463850, guid: b1f7312276da1f54184e1a5ca8a80ed0, type: 3}
-      propertyPath: gameEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 60bab3e3fa013e54c8fccb7f50d84965, type: 2}
     - target: {fileID: 5288748229577322858, guid: b1f7312276da1f54184e1a5ca8a80ed0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7248,4 +7300,5 @@ SceneRoots:
   - {fileID: 1067048243}
   - {fileID: 124235404}
   - {fileID: 1950375658}
+  - {fileID: 157468736}
   - {fileID: 171648084}

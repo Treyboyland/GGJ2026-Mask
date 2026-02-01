@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe24592ddd61a243b7b25f6b10bdac4, type: 3}
   m_Name: BulletStats-Player
   m_EditorClassIdentifier: Assembly-CSharp::BulletStatsSO
-  speed: 15
+  speed: 20
   lifeTime: 3
   damage: 1
